@@ -328,4 +328,4 @@ Caso os arquivos sejam colocados em outra pasta, os comandos de compilação e e
 ---
 
 ## Link do Repositório
-https://github.com/alanisaguiar/An-lise-comparativa-de-algoritmos-com-uso-de-paralelismo-/tree/main
+[https://github.com/alanisaguiar/An-lise-comparativa-de-algoritmos-com-uso-de-paralelismo-/tree/main](https://github.com/alanisaguiar/Analise-comparativa-de-algoritmos-com-uso-de-paralelismo)
