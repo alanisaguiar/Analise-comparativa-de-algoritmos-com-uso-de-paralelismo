@@ -61,7 +61,7 @@ Foram utilizados os seguintes textos:
 | --------------------- | -----------------------: | -----------------------: |
 | Dracula-165307.txt    |                   890389 |                   166773 |
 | MobyDick-217452.txt   |                  1276285 |                   222559 |
-| DonQuixote-388208.txt | Preencher conforme o CSV | Preencher conforme o CSV |
+| DonQuixote-388208.txt |                  2225840 |                   386868 |
 
 Os valores foram obtidos durante a leitura dos arquivos pelo programa.
 
@@ -186,6 +186,7 @@ O arquivo `resumo.csv` contém os valores estatísticos agrupados.
 
 ---
 
+### Comparação entre os métodos
 ![Comparação entre os métodos](charts/comparacao_metodos.png)
 
 O gráfico compara o tempo médio das versões serial, paralela em CPU e paralela em GPU.
@@ -292,3 +293,34 @@ No projeto, a biblioteca é utilizada principalmente pela classe:
 ```text
 src/ChartGenerator.java
 ```
+
+### Localização das bibliotecas
+
+Os dois arquivos `.jar` devem ser colocados dentro da pasta `libs`, localizada na raiz do projeto.
+
+A estrutura deve ficar assim:
+
+```text
+trabalho-computacao-paralela-alanis/
+├── libs/
+│   ├── jocl-2.0.4.jar
+│   └── xchart-3.8.8.jar
+├── src/
+├── amostras/
+├── results/
+└── charts/
+```
+
+O arquivo da biblioteca JOCL deve estar em:
+
+```text
+libs/jocl-2.0.4.jar
+```
+
+O arquivo da biblioteca XChart deve estar em:
+
+```text
+libs/xchart-3.8.8.jar
+```
+
+Caso os arquivos sejam colocados em outra pasta, os comandos de compilação e execução precisarão ser alterados para utilizar o novo caminho.
