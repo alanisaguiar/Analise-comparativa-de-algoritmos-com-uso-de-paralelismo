@@ -324,3 +324,8 @@ libs/xchart-3.8.8.jar
 ```
 
 Caso os arquivos sejam colocados em outra pasta, os comandos de compilação e execução precisarão ser alterados para utilizar o novo caminho.
+
+---
+
+## Link do Repositório
+https://github.com/alanisaguiar/An-lise-comparativa-de-algoritmos-com-uso-de-paralelismo-/tree/main
