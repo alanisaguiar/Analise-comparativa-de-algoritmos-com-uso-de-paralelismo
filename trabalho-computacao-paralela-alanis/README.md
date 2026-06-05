@@ -2,6 +2,7 @@
 
 ### Grupo:
 Alanis Aguiar Bitencourt - 2325059
+
 Kelma De Santana Alves - 2217003
 
 ## Resumo
@@ -28,28 +29,9 @@ O objetivo foi verificar como cada método se comporta com entradas de tamanhos 
 
 ---
 
-## 2. Objetivos
+## 2. Metodologia
 
-O objetivo principal é comparar o desempenho das implementações serial e paralelas de um algoritmo de contagem de palavras.
-
-Objetivos específicos:
-
-* implementar a versão serial em CPU;
-* implementar a versão paralela em CPU;
-* implementar a versão paralela em GPU;
-* utilizar textos de tamanhos diferentes;
-* variar a quantidade de threads;
-* executar cada configuração pelo menos três vezes;
-* registrar os resultados em arquivos CSV;
-* calcular estatísticas de desempenho;
-* gerar gráficos comparativos;
-* analisar o speedup e a eficiência das versões paralelas.
-
----
-
-## 3. Metodologia
-
-### 3.1 Preparação dos textos
+### Preparação dos textos
 
 Os arquivos de texto foram lidos integralmente pelo programa.
 
@@ -71,7 +53,7 @@ A palavra utilizada nos testes foi:
 the
 ```
 
-### 3.2 Arquivos utilizados
+### Arquivos utilizados
 
 Foram utilizados os seguintes textos:
 
@@ -83,7 +65,7 @@ Foram utilizados os seguintes textos:
 
 Os valores foram obtidos durante a leitura dos arquivos pelo programa.
 
-### 3.3 Repetições
+### Repetições
 
 Cada configuração foi executada cinco vezes.
 
@@ -97,7 +79,7 @@ System.nanoTime()
 
 O resultado foi convertido para milissegundos.
 
-### 3.4 Configurações da CPU
+### Configurações da CPU
 
 A versão paralela em CPU foi executada com:
 
@@ -108,7 +90,7 @@ A versão paralela em CPU foi executada com:
 8 threads
 ```
 
-### 3.5 Estatísticas
+### Estatísticas
 
 Para cada configuração foram calculados:
 
@@ -134,9 +116,9 @@ Eficiência = speedup / quantidade de threads
 
 ---
 
-## 4. Implementações
+## 3. Implementações
 
-### 4.1 SerialCPU
+### SerialCPU
 
 A versão serial percorre o vetor de palavras do início ao fim.
 
@@ -152,7 +134,7 @@ for (String word : words) {
 
 Essa implementação foi utilizada como referência para validar as versões paralelas.
 
-### 4.2 ParallelCPU
+### ParallelCPU
 
 A versão paralela utiliza um `ExecutorService` com um pool fixo de threads.
 
@@ -169,7 +151,7 @@ Callable
 Future
 ```
 
-### 4.3 ParallelGPU
+### ParallelGPU
 
 A versão paralela em GPU utiliza OpenCL por meio da biblioteca JOCL.
 
@@ -189,7 +171,7 @@ Depois da execução, os resultados são enviados novamente para o Java e somado
 
 ---
 
-## 5. Resultados
+## 4. Resultados
 
 Os resultados completos estão disponíveis em:
 
@@ -277,7 +259,7 @@ Essa validação demonstra que as três implementações realizaram a mesma oper
 
 ---
 
-## 6. Conclusão
+## 5. Conclusão
 
 O trabalho permitiu comparar diferentes formas de execução de um algoritmo de contagem de palavras.
 
@@ -293,8 +275,20 @@ Para entradas maiores ou para operações matemáticas mais complexas, a GPU pod
 
 ---
 
-## 7. Bibliotecas utilizadas
+## 6. Bibliotecas utilizadas
 
-JOCL 2.0.4
+Este projeto utiliza duas bibliotecas externas:
 
-XChart 3.8.8
+### JOCL 2.0.4
+
+A biblioteca JOCL é utilizada para permitir o uso de OpenCL em Java e executar o algoritmo paralelo na GPU.
+
+### XChart 3.8.8
+
+A biblioteca XChart é utilizada para gerar os gráficos com os resultados dos testes.
+
+No projeto, a biblioteca é utilizada principalmente pela classe:
+
+```text
+src/ChartGenerator.java
+```
